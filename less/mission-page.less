@@ -6,6 +6,10 @@ header {
     top: 0;
     background: #ffffff;
 
+    @media @tablet {
+        background-color: lightblue;
+    }
+
     .accent {
         background-color: @primary-color;
         text-align: center;
@@ -16,21 +20,32 @@ header {
 
 .main {
     margin-top: 250px;
-    height: 560px;
-    .flexbox(column, nowrap, center);
+    height: 600px; 
+    .flexbox(row, wrap, flex-start);
     background-image: url(../img/fezbot2000-smWTOhdPvJc-unsplash.jpg);
     background-size: cover;
-    background-position: center;
-    
+    background-position: bottom;
+    background-blend-mode: ;
+    align-content: flex-start;
+    padding-bottom: 10px;
     
 
     h1 {
         .font-style(@contrast-text, 700);
-        font-size: 8.6rem;        
+        font-size: 8.6rem;
+        flex-basis: 66%;
+        height: 16%;
+        margin-top: 40px;
+        margin-left: 20px;
+        background-color: rgba(.5, .5, .5, .2)
     }
     
     p {
         .font-style(@contrast-text, 600);
+        font-size: 2.4rem;
+        flex-basis: 66%;
+        margin-left: 20px;
+        background-color: rgba(.5, .5, .5, .2)
     }
 }
 
@@ -43,6 +58,38 @@ header {
 
         .copy {
             width: 33%;
+            .flexbox(column, nowrap, space-around);
+            h3 {
+                font-size: 4rem;
+                text-emphasis: 700;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+            p {
+                font-size: 2.4rem;
+                padding: 10px;
+                flex: 1;
+            }
+            a {
+                display: block;
+                height: 60px;
+                width: 300px;
+                text-align: center;
+                background-color: @border-color;
+                font-size: 3rem;
+                padding: 12px;
+                border-radius: 5px;
+                margin: 0 auto;
+                align-self: flex-end;
+                text-decoration: none;
+                color: @main-text;
+                margin-bottom: 20px;
+                
+
+                &:hover {
+                    background-color: @primary-color;
+                }
+            }
         }
 
         .image {
@@ -60,5 +107,6 @@ header {
     }
     .right {
         flex-direction: row-reverse;
+        margin-bottom: 20px;
     }
 }
