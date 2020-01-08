@@ -170,8 +170,16 @@ nav a {
   margin-right: 40px;
 }
 @media (max-width: 1000px) {
+  nav a {
+    flex-basis: 15%;
+  }
   nav a:nth-child(2) {
     margin-left: 3%;
+  }
+}
+@media (max-width: 500px) {
+  nav a {
+    flex-basis: 24%;
   }
 }
 nav .nav-title {
@@ -243,7 +251,6 @@ footer .footer-border {
   background-image: url(../img/fezbot2000-smWTOhdPvJc-unsplash.jpg);
   background-size: cover;
   background-position: bottom;
-  background-blend-mode: ;
   align-content: flex-start;
   padding-bottom: 10px;
 }
@@ -352,6 +359,12 @@ footer .footer-border {
 @media (max-width: 1000px) {
   .action-call .container .copy a {
     margin-top: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .action-call .container .copy a {
+    width: 95%;
+    font-size: 2.6rem;
   }
 }
 .action-call .container .copy a:hover {
