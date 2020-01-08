@@ -127,7 +127,7 @@ table {
 }
 * {
   box-sizing: border-box;
-  border: 1px solid black;
+  border: 0px solid black;
 }
 html {
   font-size: 62.5%;
@@ -153,6 +153,12 @@ nav {
   margin-top: 21px;
   height: 142px;
 }
+@media (max-width: 1000px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
 nav a {
   text-decoration: none;
   font-size: 2rem;
@@ -161,6 +167,12 @@ nav a {
   flex-basis: 50%;
   flex-basis: 10%;
   align-self: flex-start;
+  margin-right: 40px;
+}
+@media (max-width: 1000px) {
+  nav a:nth-child(2) {
+    margin-left: 3%;
+  }
 }
 nav .nav-title {
   color: #1B1A1A;
@@ -170,18 +182,15 @@ nav .nav-title {
   flex-basis: 90%;
   margin-left: 3%;
 }
-footer {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  text-align: center;
-  font-size: 1.6rem;
-  background: #ffffff;
+@media (max-width: 1000px) {
+  nav .nav-title {
+    font-size: 5rem;
+  }
 }
-footer .footer-border {
-  border-top: 1px solid #BDBDBD;
-  box-shadow: 0px -4px 7px rgba(0, 0, 0, 0.5);
+@media (max-width: 500px) {
+  nav .nav-title {
+    flex-basis: 100%;
+  }
 }
 header {
   overflow: hidden;
@@ -196,6 +205,12 @@ header {
     background-color: lightblue;
   }
 }
+@media (max-width: 500px) {
+  header {
+    background-color: pink;
+    position: static;
+  }
+}
 header .accent {
   background-color: #FF9233;
   text-align: center;
@@ -203,6 +218,20 @@ header .accent {
   color: #FFFFFF;
   font-weight: 800;
   flex-basis: 50%;
+}
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  background: #ffffff;
+}
+footer .footer-border {
+  border-top: 1px solid #BDBDBD;
+  box-shadow: 0px -4px 7px rgba(0, 0, 0, 0.5);
 }
 .main {
   margin-top: 250px;
@@ -218,6 +247,11 @@ header .accent {
   align-content: flex-start;
   padding-bottom: 10px;
 }
+@media (max-width: 500px) {
+  .main {
+    margin-top: 0;
+  }
+}
 .main h1 {
   color: #FFFFFF;
   font-weight: 700;
@@ -229,6 +263,19 @@ header .accent {
   margin-left: 20px;
   background-color: rgba(1, 1, 1, 0.2);
 }
+@media (max-width: 1000px) {
+  .main h1 {
+    font-size: 5.6rem;
+    flex-basis: 100%;
+    margin-left: 0;
+    padding-left: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .main h1 {
+    font-size: 4.2rem;
+  }
+}
 .main p {
   color: #FFFFFF;
   font-weight: 600;
@@ -237,6 +284,14 @@ header .accent {
   flex-basis: 66%;
   margin-left: 20px;
   background-color: rgba(1, 1, 1, 0.2);
+}
+@media (max-width: 1000px) {
+  .main p {
+    flex-basis: 100%;
+    margin-left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 .action-call {
   border-top: 20px solid #FF9233;
@@ -258,11 +313,21 @@ header .accent {
   flex-wrap: nowrap;
   justify-content: space-around;
 }
+@media (max-width: 1000px) {
+  .action-call .container .copy {
+    width: 100%;
+  }
+}
 .action-call .container .copy h3 {
   font-size: 4rem;
   text-emphasis: 700;
   padding: 10px;
   margin-bottom: 10px;
+}
+@media (max-width: 500px) {
+  .action-call .container .copy h3 {
+    font-size: 3.2rem;
+  }
 }
 .action-call .container .copy p {
   font-size: 2.4rem;
@@ -284,11 +349,21 @@ header .accent {
   color: #1B1A1A;
   margin-bottom: 20px;
 }
+@media (max-width: 1000px) {
+  .action-call .container .copy a {
+    margin-top: 20px;
+  }
+}
 .action-call .container .copy a:hover {
   background-color: #FF9233;
 }
 .action-call .container .image {
   width: 66%;
+}
+@media (max-width: 1000px) {
+  .action-call .container .image {
+    width: 100%;
+  }
 }
 .action-call .container img {
   max-width: 100%;
@@ -298,7 +373,17 @@ header .accent {
   border-bottom: 10px solid #FF9233;
   padding: 0;
 }
+@media (max-width: 1000px) {
+  .action-call .left {
+    flex-direction: column;
+  }
+}
 .action-call .right {
   flex-direction: row-reverse;
   margin-bottom: 20px;
+}
+@media (max-width: 1000px) {
+  .action-call .right {
+    flex-direction: column;
+  }
 }
