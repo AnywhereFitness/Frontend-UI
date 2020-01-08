@@ -242,7 +242,7 @@ footer .footer-border {
   box-shadow: 0px -4px 7px rgba(0, 0, 0, 0.5);
 }
 .main {
-  margin-top: 250px;
+  margin-top: 240px;
   height: 600px;
   display: flex;
   flex-direction: row;
@@ -269,13 +269,13 @@ footer .footer-border {
   margin-top: 40px;
   margin-left: 20px;
   background-color: rgba(1, 1, 1, 0.2);
+  padding: 20px;
 }
 @media (max-width: 1000px) {
   .main h1 {
     font-size: 5.6rem;
     flex-basis: 100%;
     margin-left: 0;
-    padding-left: 20px;
   }
 }
 @media (max-width: 500px) {
@@ -291,17 +291,16 @@ footer .footer-border {
   flex-basis: 66%;
   margin-left: 20px;
   background-color: rgba(1, 1, 1, 0.2);
+  padding: 20px;
 }
 @media (max-width: 1000px) {
   .main p {
     flex-basis: 100%;
     margin-left: 0;
-    padding-left: 20px;
-    padding-right: 20px;
   }
 }
 .action-call {
-  border-top: 20px solid #FF9233;
+  border-top: 40px solid #FF9233;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -319,6 +318,7 @@ footer .footer-border {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-around;
+  padding: 20px;
 }
 @media (max-width: 1000px) {
   .action-call .container .copy {
@@ -364,7 +364,7 @@ footer .footer-border {
 @media (max-width: 500px) {
   .action-call .container .copy a {
     width: 95%;
-    font-size: 2.6rem;
+    font-size: 2.4rem;
   }
 }
 .action-call .container .copy a:hover {
@@ -383,7 +383,7 @@ footer .footer-border {
   height: auto;
 }
 .action-call .left {
-  border-bottom: 10px solid #FF9233;
+  border-bottom: 40px solid #FF9233;
   padding: 0;
 }
 @media (max-width: 1000px) {
