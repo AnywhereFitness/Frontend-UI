@@ -156,7 +156,6 @@ nav {
 @media (max-width: 1000px) {
   nav {
     flex-wrap: wrap;
-    justify-content: flex-start;
   }
 }
 nav ul {
@@ -193,7 +192,6 @@ nav a {
   flex-basis: 10%;
   align-self: flex-start;
   margin-right: 40px;
-  display: inline-block;
 }
 nav a:hover {
   color: #FF9233;
