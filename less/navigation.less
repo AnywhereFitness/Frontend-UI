@@ -2,10 +2,38 @@ nav {
     .flexbox(row, nowrap, space-between);
     margin-top: 21px;
     height: 142px;
-    
     @media @tablet {
         flex-wrap: wrap;
         justify-content: flex-start;
+    }
+
+    ul {
+      list-style-type: none;
+      overflow: hidden;
+    }
+    .dropbtn {
+      padding-bottom: 6px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      line-height: 1.5;
+      max-width: 120px;
+      background-color: @primary-color;
+      padding-left: 5px;
+      border-radius: 5px;
+      a:hover {
+          color: @contrast-text;
+      }
+    }
+
+    .dropdown {
+      display: inline-block;
+      &:hover .dropdown-content {
+        display: block;
+      }
     }
 
     a {
@@ -15,6 +43,7 @@ nav {
         flex-basis: 10%;
         align-self: flex-start;
         margin-right: 40px;
+        display: inline-block;
 
         &:hover {
             color: @primary-color;
@@ -56,7 +85,7 @@ header {
     background: #ffffff;
 
     @media @tablet {
-        background-color: lightblue;        
+        background-color: lightblue;
     }
     @media @phone {
         background-color: pink;
@@ -67,6 +96,6 @@ header {
         background-color: @primary-color;
         text-align: center;
         padding: 17px 0 22px 0;
-        .font-style(@contrast-text, 800)    
-    } 
+        .font-style(@contrast-text, 800)
+    }
 }

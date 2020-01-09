@@ -159,15 +159,41 @@ nav {
     justify-content: flex-start;
   }
 }
+nav ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+nav .dropbtn {
+  padding-bottom: 6px;
+}
+nav .dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  line-height: 1.5;
+  max-width: 120px;
+  background-color: #FF9233;
+  padding-left: 5px;
+  border-radius: 5px;
+}
+nav .dropdown-content a:hover {
+  color: #FFFFFF;
+}
+nav .dropdown {
+  display: inline-block;
+}
+nav .dropdown:hover .dropdown-content {
+  display: block;
+}
 nav a {
   text-decoration: none;
   font-size: 2rem;
   color: #1B1A1A;
   font-weight: 800;
-  flex-basis: 50%;
   flex-basis: 10%;
   align-self: flex-start;
   margin-right: 40px;
+  display: inline-block;
 }
 nav a:hover {
   color: #FF9233;
@@ -188,7 +214,6 @@ nav a:hover {
 nav .nav-title {
   color: #1B1A1A;
   font-weight: 700;
-  flex-basis: 50%;
   font-size: 6rem;
   flex-basis: 90%;
   margin-left: 3%;
@@ -228,7 +253,6 @@ header .accent {
   padding: 17px 0 22px 0;
   color: #FFFFFF;
   font-weight: 800;
-  flex-basis: 50%;
 }
 footer {
   position: fixed;
@@ -265,7 +289,6 @@ footer .footer-border {
 .main h1 {
   color: #FFFFFF;
   font-weight: 700;
-  flex-basis: 50%;
   font-size: 8.6rem;
   flex-basis: 70%;
   height: 16%;
@@ -289,7 +312,6 @@ footer .footer-border {
 .main p {
   color: #FFFFFF;
   font-weight: 600;
-  flex-basis: 50%;
   font-size: 2.4rem;
   flex-basis: 70%;
   margin-left: 20px;
@@ -401,6 +423,7 @@ footer .footer-border {
 .action-call .container img {
   max-width: 100%;
   height: auto;
+  border-radius: 100px;
 }
 .action-call .left {
   border-bottom: 40px solid #FF9233;
