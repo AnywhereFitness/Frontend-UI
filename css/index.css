@@ -161,6 +161,17 @@ nav {
 nav ul {
   list-style-type: none;
   overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+@media (max-width: 1000px) {
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 }
 nav .dropbtn {
   padding-bottom: 6px;
@@ -170,10 +181,12 @@ nav .dropdown-content {
   position: absolute;
   z-index: 1;
   line-height: 1.5;
-  max-width: 120px;
+  max-width: 125px;
   background-color: #FF9233;
   padding-left: 5px;
   border-radius: 5px;
+  border: 3px solid black;
+  margin-top: 3px;
 }
 nav .dropdown-content a:hover {
   color: #FFFFFF;
@@ -183,6 +196,25 @@ nav .dropdown {
 }
 nav .dropdown:hover .dropdown-content {
   display: block;
+}
+nav li {
+  flex-basis: 15%;
+}
+@media (max-width: 1000px) {
+  nav li {
+    flex-basis: 20%;
+  }
+}
+@media (max-width: 500px) {
+  nav li {
+    flex-basis: 45%;
+  }
+}
+nav li:nth-child(1) {
+  margin-left: 3%;
+}
+nav li:nth-child(2) {
+  margin-left: 3%;
 }
 nav a {
   text-decoration: none;
@@ -200,18 +232,10 @@ nav a:hover {
   nav a {
     flex-basis: 15%;
   }
-  nav a:nth-child(2) {
-    margin-left: 3%;
-  }
 }
 @media (max-width: 500px) {
   nav a {
-    margin-left: 3%;
-  }
-}
-@media (max-width: 500px) {
-  nav a {
-    flex-basis: 24%;
+    flex-basis: 50%;
   }
 }
 nav .nav-title {
@@ -219,7 +243,6 @@ nav .nav-title {
   font-weight: 700;
   font-size: 6rem;
   flex-basis: 90%;
-  margin-left: 3%;
 }
 @media (max-width: 1000px) {
   nav .nav-title {
