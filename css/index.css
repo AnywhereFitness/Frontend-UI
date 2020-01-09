@@ -169,6 +169,9 @@ nav a {
   align-self: flex-start;
   margin-right: 40px;
 }
+nav a:hover {
+  color: #FF9233;
+}
 @media (max-width: 1000px) {
   nav a {
     flex-basis: 15%;
