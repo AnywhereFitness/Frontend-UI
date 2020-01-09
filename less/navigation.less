@@ -1,0 +1,101 @@
+nav {
+    .flexbox(row, nowrap, space-between);
+    margin-top: 21px;
+    height: 142px;
+    @media @tablet {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    ul {
+      list-style-type: none;
+      overflow: hidden;
+    }
+    .dropbtn {
+      padding-bottom: 6px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      line-height: 1.5;
+      max-width: 120px;
+      background-color: @primary-color;
+      padding-left: 5px;
+      border-radius: 5px;
+      a:hover {
+          color: @contrast-text;
+      }
+    }
+
+    .dropdown {
+      display: inline-block;
+      &:hover .dropdown-content {
+        display: block;
+      }
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 2rem;
+        .font-style(@main-text, 800);
+        flex-basis: 10%;
+        align-self: flex-start;
+        margin-right: 40px;
+        display: inline-block;
+
+        &:hover {
+            color: @primary-color;
+        }
+
+        @media @tablet {
+            flex-basis: 15%;
+            &:nth-child(2) {
+                margin-left: 3%;
+            }
+        }
+
+        @media @phone {
+            flex-basis: 24%;
+        }
+    }
+
+    .nav-title {
+        .font-style(@main-text, 700);
+        font-size: 6rem;
+        flex-basis: 90%;
+        margin-left: 3%;
+
+        @media @tablet {
+            font-size: 5rem;
+        }
+        @media @phone {
+            flex-basis: 100%;
+        }
+    }
+}
+
+header {
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: #ffffff;
+
+    @media @tablet {
+        background-color: lightblue;
+    }
+    @media @phone {
+        background-color: pink;
+        position: static;
+    }
+
+    .accent {
+        background-color: @primary-color;
+        text-align: center;
+        padding: 17px 0 22px 0;
+        .font-style(@contrast-text, 800)
+    }
+}
