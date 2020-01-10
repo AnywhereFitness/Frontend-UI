@@ -196,14 +196,14 @@ h4 {
   z-index: 1;
   line-height: 1.5;
   max-width: 125px;
-  background-color: #FF9233;
+  background-color: white;
   padding-left: 5px;
   border-radius: 5px;
-  border: 3px solid black;
+  border: 1px solid black;
   margin-top: 3px;
 }
 .mission-header nav .dropdown-content a:hover {
-  color: #FFFFFF;
+  color: #FF9233;
 }
 .mission-header nav .dropdown {
   display: inline-block;
@@ -319,7 +319,7 @@ h4 {
   }
 }
 .action-call {
-  border-top: 40px solid #FF9233;
+  border-top: 1px solid #BDBDBD;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -413,7 +413,7 @@ h4 {
   height: auto;
 }
 .action-call .left {
-  border-bottom: 40px solid #FF9233;
+  border-bottom: 1px solid #BDBDBD;
   padding: 0;
 }
 @media (max-width: 1000px) {
