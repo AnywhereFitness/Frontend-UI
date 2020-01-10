@@ -256,20 +256,6 @@ h4 {
     flex-basis: 100%;
   }
 }
-.mission-footer {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  text-align: center;
-  margin: 0 auto;
-  font-size: 1.6rem;
-  background: #ffffff;
-}
-.mission-footer .footer-border {
-  border-top: 1px solid #BDBDBD;
-  box-shadow: 0px -4px 7px rgba(0, 0, 0, 0.5);
-}
 .mission-main-section {
   margin-top: 240px;
   height: 600px;
@@ -443,4 +429,18 @@ h4 {
   .action-call .right {
     flex-direction: column;
   }
+}
+.mission-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  background: #ffffff;
+}
+.mission-footer .footer-border {
+  border-top: 1px solid #BDBDBD;
+  box-shadow: 0px -4px 7px rgba(0, 0, 0, 0.5);
 }
