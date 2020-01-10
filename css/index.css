@@ -127,7 +127,6 @@ table {
 }
 * {
   box-sizing: border-box;
-  border: 0px solid black;
 }
 html {
   font-size: 62.5%;
@@ -145,7 +144,27 @@ h3 {
 h4 {
   font-size: 2rem;
 }
-nav {
+.mission-header {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: #ffffff;
+}
+@media (max-width: 500px) {
+  .mission-header {
+    position: static;
+  }
+}
+.mission-header .accent {
+  background-color: #FF9233;
+  text-align: center;
+  padding: 17px 0 22px 0;
+  color: #FFFFFF;
+  font-weight: 800;
+}
+.mission-header nav {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -153,12 +172,7 @@ nav {
   margin-top: 21px;
   height: 142px;
 }
-@media (max-width: 1000px) {
-  nav {
-    flex-wrap: wrap;
-  }
-}
-nav ul {
+.mission-header nav ul {
   list-style-type: none;
   overflow: hidden;
   width: 100%;
@@ -168,15 +182,15 @@ nav ul {
   justify-content: space-between;
 }
 @media (max-width: 1000px) {
-  nav ul {
+  .mission-header nav ul {
     flex-wrap: wrap;
     justify-content: flex-start;
   }
 }
-nav .dropbtn {
+.mission-header nav .dropbtn {
   padding-bottom: 6px;
 }
-nav .dropdown-content {
+.mission-header nav .dropdown-content {
   display: none;
   position: absolute;
   z-index: 1;
@@ -188,35 +202,33 @@ nav .dropdown-content {
   border: 3px solid black;
   margin-top: 3px;
 }
-nav .dropdown-content a:hover {
+.mission-header nav .dropdown-content a:hover {
   color: #FFFFFF;
 }
-nav .dropdown {
+.mission-header nav .dropdown {
   display: inline-block;
 }
-nav .dropdown:hover .dropdown-content {
+.mission-header nav .dropdown:hover .dropdown-content {
   display: block;
 }
-nav li {
+.mission-header nav li {
   flex-basis: 15%;
 }
 @media (max-width: 1000px) {
-  nav li {
+  .mission-header nav li {
     flex-basis: 20%;
   }
 }
 @media (max-width: 500px) {
-  nav li {
+  .mission-header nav li {
     flex-basis: 45%;
   }
 }
-nav li:nth-child(1) {
+.mission-header nav li:nth-child(1),
+.mission-header nav li:nth-child(2) {
   margin-left: 3%;
 }
-nav li:nth-child(2) {
-  margin-left: 3%;
-}
-nav a {
+.mission-header nav a {
   text-decoration: none;
   font-size: 2rem;
   color: #1B1A1A;
@@ -225,56 +237,26 @@ nav a {
   align-self: flex-start;
   margin-right: 40px;
 }
-nav a:hover {
+.mission-header nav a:hover {
   color: #FF9233;
 }
-@media (max-width: 1000px) {
-  nav a {
-    flex-basis: 15%;
-  }
-}
-@media (max-width: 500px) {
-  nav a {
-    flex-basis: 50%;
-  }
-}
-nav .nav-title {
+.mission-header nav .nav-title {
   color: #1B1A1A;
   font-weight: 700;
   font-size: 6rem;
   flex-basis: 90%;
 }
 @media (max-width: 1000px) {
-  nav .nav-title {
+  .mission-header nav .nav-title {
     font-size: 5rem;
   }
 }
 @media (max-width: 500px) {
-  nav .nav-title {
+  .mission-header nav .nav-title {
     flex-basis: 100%;
   }
 }
-header {
-  overflow: hidden;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  background: #ffffff;
-}
-@media (max-width: 500px) {
-  header {
-    position: static;
-  }
-}
-header .accent {
-  background-color: #FF9233;
-  text-align: center;
-  padding: 17px 0 22px 0;
-  color: #FFFFFF;
-  font-weight: 800;
-}
-footer {
+.mission-footer {
   position: fixed;
   left: 0;
   right: 0;
@@ -284,11 +266,11 @@ footer {
   font-size: 1.6rem;
   background: #ffffff;
 }
-footer .footer-border {
+.mission-footer .footer-border {
   border-top: 1px solid #BDBDBD;
   box-shadow: 0px -4px 7px rgba(0, 0, 0, 0.5);
 }
-.main {
+.mission-main-section {
   margin-top: 240px;
   height: 600px;
   display: flex;
@@ -302,11 +284,11 @@ footer .footer-border {
   padding-bottom: 10px;
 }
 @media (max-width: 500px) {
-  .main {
+  .mission-main-section {
     margin-top: 0;
   }
 }
-.main h1 {
+.mission-main-section h1 {
   color: #FFFFFF;
   font-weight: 700;
   font-size: 8.6rem;
@@ -318,18 +300,18 @@ footer .footer-border {
   padding: 20px;
 }
 @media (max-width: 1000px) {
-  .main h1 {
+  .mission-main-section h1 {
     font-size: 5.6rem;
     flex-basis: 100%;
     margin-left: 0;
   }
 }
 @media (max-width: 500px) {
-  .main h1 {
+  .mission-main-section h1 {
     font-size: 4.2rem;
   }
 }
-.main p {
+.mission-main-section p {
   color: #FFFFFF;
   font-weight: 600;
   font-size: 2.4rem;
@@ -339,14 +321,14 @@ footer .footer-border {
   padding: 20px;
 }
 @media (max-width: 1000px) {
-  .main p {
+  .mission-main-section p {
     flex-basis: 100%;
     margin-left: 0;
     font-size: 2rem;
   }
 }
 @media (max-width: 500px) {
-  .main p {
+  .mission-main-section p {
     font-size: 1.6rem;
   }
 }
