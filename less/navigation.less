@@ -1,21 +1,5 @@
-.mission-header {
-    overflow: hidden;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    background: #ffffff;
-
-    @media @phone {
-        position: static;
-    }
-
-    .accent {
-        background-color: @primary-color;
-        text-align: center;
-        padding: 17px 0 22px 0;
-        .font-style(@contrast-text, 800)
-    }
+.navbar {
+   .display(flex, space-evenly);
     
     nav {
         .flexbox(row, nowrap, space-between);
@@ -99,4 +83,8 @@
             }
         }
     }
+}
+
+.navbar {
+    .display(flex, space-evenly)
 }

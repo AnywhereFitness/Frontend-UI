@@ -1,12 +1,18 @@
-.flexbox(@flex-dir, @flex-wrap, @justify) {
-    display: flex;
-    flex-direction: @flex-dir;
-    flex-wrap: @flex-wrap;
-    justify-content: @justify;
-    
+.display(@flex, @space) {
+    display: @flex;
+    justify-content: @space;
 }
 
-.font-style(@ft-color, @ft-emphasis) {
-    color: @ft-color;
-    font-weight: @ft-emphasis;
+.max-width {
+    max-width: 45%;
 } 
+
+.emptydiv{
+    background-color: @main-color;
+    height: 4vh;
+    margin-bottom: 20px;
+}
+
+.mb{
+    margin-bottom: 30px;
+}
